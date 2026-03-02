@@ -1,0 +1,41 @@
+Data Types & Variables:
+
+Variables
+Assignment: Values are assigned using the equals sign (=).
+Naming Rules: Names must start with a letter or an underscore, and can only contain alphanumeric characters and underscores.
+Case-sensitive: age, Age, and AGE are considered three different variables.
+
+# Variable assignment
+age = 30
+name = "Alice"
+is_student = True
+
+# Reassignment (dynamic typing)
+age = "thirty" # The variable 'age' now holds a string type value
+
+# Multiple assignment
+x, y, z = 10, 20, 30
+
+
+Basic Data Types
+Python has several built-in data types. The most common are: 
+Integer (int): Whole numbers, positive or negative, without decimals.
+
+count = 100
+print(type(count))
+# Output: <class 'int'>
+
+Float (float): Numbers with a decimal point.
+pi = 3.14159
+print(type(pi))
+# Output: <class 'float'>
+
+String (str): Sequence of characters enclosed in single (' '), double (" "), or triple quotes (""" """).
+message = "Hello, world!"
+print(type(message))
+# Output: <class 'str'>
+
+Boolean (bool): Represents truth values, either True or False.
+is_active = True
+print(type(is_active))
+# Output: <class 'bool'>
