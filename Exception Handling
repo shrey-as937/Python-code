@@ -1,0 +1,48 @@
+Exception Handling: try, except, else, finally clauses
+Python's exception handling uses try, except, else, and finally blocks to manage runtime errors gracefully. This prevents the program from crashing unexpectedly and allows for cleanup actions regardless of whether an exception occurred. 
+Server Academy
+Server Academy
+
+Keywords & Usage
+try: This block contains the code that might raise an exception during execution.
+except: If an exception occurs in the try block, the execution flow jumps to the corresponding except block to handle the specific error (e.g., ZeroDivisionError, ValueError).
+else: This block is optional and executes only if the code in the try block runs successfully without any exceptions.
+finally: This block of code will always execute, regardless of whether an exception occurred or was handled. It is commonly used for essential cleanup tasks like closing files or releasing resources.
+
+try:
+    # Code that might raise an exception
+    numerator = 10
+    denominator = int(input("Enter a number: ")) 
+    result = numerator / denominator
+
+except ZeroDivisionError:
+    # Handles the specific error of division by zero
+    print("Error: You cannot divide by zero!")
+
+except ValueError:
+    # Handles the error if the user enters a non-numeric value
+    print("Error: Invalid input! Please enter a valid number.")
+
+else:
+    # Executes only if no exceptions were raised in the try block
+    print(f"Division successful! Result is: {result}")
+
+finally:
+    # Executes regardless of the outcome
+    print("Program execution completed.")
+Example Scenarios:
+If the user enters 2:
+try block runs successfully.
+except blocks are skipped.
+else block prints the result (5.0).
+finally block runs.
+If the user enters 0:
+try block raises a ZeroDivisionError.
+The matching except ZeroDivisionError block handles the error.
+else block is skipped.
+finally block runs.
+If the user enters "abc":
+try block raises a ValueError during the int() conversion.
+The matching except ValueError block handles the error.
+else block is skipped.
+finally block runs
