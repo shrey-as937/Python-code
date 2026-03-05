@@ -1,0 +1,88 @@
+Object-Oriented Programming (OOP): Classes, objects, inheritance, and polymorphism.
+
+
+Object-Oriented Programming (OOP) in Python structures code using real-world concepts like classes and objects, promoting reusability and organization. The core principles are classes, objects, inheritance, and polymorphism, each demonstrated below with code examples
+Classes and Objects
+A class is a blueprint or template that defines the attributes (data) and methods (functions) that all objects of that class will have. An object is a specific instance of a class, with its own unique set of data for the defined attributes
+
+# Define a class named 'Dog'
+class Dog:
+    # A class attribute, shared by all instances
+    species = "Canis familiaris"
+
+    # The __init__ method (constructor) initializes a new object
+    def __init__(self, name, age):
+        self.name = name  # Instance attribute unique to each object
+        self.age = age    # Instance attribute unique to each object
+
+    # A method to perform an action
+    def bark(self):
+        return f"{self.name} says Woof!"
+
+# Create objects (instances) of the Dog class
+my_dog = Dog("Buddy", 3)
+your_dog = Dog("Lucy", 5)
+
+# Access attributes and call methods
+print(f"{my_dog.name} is {my_dog.age} years old.")
+print(your_dog.bark())
+
+
+Inheritance
+Inheritance allows a new class (child or derived class) to inherit attributes and methods from an existing class (parent or base class). This promotes code reuse and creates a hierarchical relationship between classes. The super() function is commonly used to call the parent class's methods or constructor
+
+# Parent class
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def eat(self):
+        print(f"{self.name} is eating.")
+
+# Child class inherits from Animal
+class Dog(Animal):
+    def __init__(self, name, breed):
+        # Use super() to call the parent's __init__ method
+        super().__init__(name)
+        self.breed = breed
+
+    # Add a new method specific to the child class
+    def bark(self):
+        print("Woof woof!")
+
+# Create an object of the child class
+my_dog = Dog("Buddy", "Golden Retriever")
+my_dog.eat()   # Calls the inherited method from the parent
+my_dog.bark()  # Calls the child's method
+
+
+Polymorphism
+Polymorphism (meaning "many forms") allows objects of different classes to be treated as objects of a common superclass, or to respond to the same method call in different ways. In Python, this is often achieved through method overriding, where a child class provides a specific implementation of a method that is already defined in its parent class.
+
+
+
+class Animal:
+    def speak(self):
+        return "Animal makes a sound"
+
+class Dog(Animal):
+    # Override the speak method for Dog
+    def speak(self):
+        return "Woof!"
+
+class Cat(Animal):
+    # Override the speak method for Cat
+    def speak(self):
+        return "Meow!"
+
+# A function that takes an Animal object (or any object with a 'speak' method)
+def animal_sound(animal):
+    print(animal.speak())
+
+# Create different objects
+dog_obj = Dog()
+cat_obj = Cat()
+
+# The same function call produces different results based on the object type
+animal_sound(dog_obj)
+animal_sound(cat_obj)
