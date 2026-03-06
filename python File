@@ -1,0 +1,34 @@
+Python’s ecosystem includes over 200,000 libraries, but a modern, job-aligned syllabus (targeting AI, data science, and backend) focuses on a specific set of tools
+
+Using Python Libraries in Code
+To use a Python library, you must first import it into your program using the import statement. 
+GeeksforGeeks
+GeeksforGeeks
+Import the entire library: import library_name (e.g., import math).
+Import with an alias: import library_name as alias (e.g., import pandas as pd).
+Import specific items: from library_name import item_name (e.g., from math import sqrt). 
+GeeksforGeeks
+GeeksforGeeks
+ +1
+Once imported, you can access the functions, classes, and methods within the library: 
+
+
+# Example using the 'math' standard library
+import math
+
+# Use the sqrt function from the math library
+result = math.sqrt(16) 
+print(result) # Output: 4.0
+
+# Access the pi constant
+print(math.pi) # Output: 3.141592653589793
+
+
+Installing External Libraries
+While some libraries (the Python Standard Library) come with every Python installation, most are external (third-party) and must be installed using a package manager like pip. 
+To install a third-party library, use the following command in your terminal or command promp
+
+pip install library_name
+
+pip install requests
+
